@@ -1,5 +1,5 @@
  
-int FirstDigit,SecondDigit,ThirdDigit,SpeedControl,enfrt,enflt;
+int FirstDigit,SecondDigit,ThirdDigit,SpeedControl,enfrt;
 
 #define X 88
 #define S 83
@@ -222,9 +222,9 @@ void loop() {
              
           }
           enfrt= map(analogRead(SpeedControl), 0, 1023, 0, 255);
-          enflt= map(analogRead(SpeedControl), 0, 1023, 0, 255);
+          
           analogWrite(enfr,enfrt);
-          analogWrite(enfl,enflt);
+          analogWrite(enfl,enfrt);
           
       }
      
