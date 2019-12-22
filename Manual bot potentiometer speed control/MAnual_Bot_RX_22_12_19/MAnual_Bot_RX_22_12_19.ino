@@ -221,8 +221,10 @@ void loop() {
                  SpeedControl=100*(int(FirstDigit)-48)+10*(int(SecondDigit)-48)+(int(ThirdDigit)-48);
              
           }
-          enfrt= map(analogRead(enfr), 0, 1023, 0, 255);
-          enflt= map(analogRead(enfl), 0, 1023, 0, 255);
+          enfrt= map(analogRead(SpeedControl), 0, 1023, 0, 255);
+          enflt= map(analogRead(SpeedControl), 0, 1023, 0, 255);
+          analogWrite(enfr,enfrt);
+          analogWrite(enfl,enflt);
           
       }
      
